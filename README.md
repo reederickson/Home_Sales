@@ -5,6 +5,7 @@
 
 ## Answer the following questions using SparkSQL:
 * What is the average price for a four-bedroom house sold for each year? Round off your answer to two decimal places.
+
 +--------------------+----------+
 |round(avg(price), 2)|year(date)|
 +--------------------+----------+
@@ -14,7 +15,9 @@
 |           296363.88|      2022|
 +--------------------+----------+
 
+
 * What is the average price of a home for each year the home was built, that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
+
 +--------------------+----------+
 |round(avg(price), 2)|date_built|
 +--------------------+----------+
@@ -28,7 +31,9 @@
 |           292676.79|      2017|
 +--------------------+----------+
 
+
 * What is the average price of a home for each year the home was built, that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
+
 +--------------------+----------+
 |round(avg(price), 2)|date_built|
 +--------------------+----------+
@@ -42,7 +47,9 @@
 |           280317.58|      2017|
 +--------------------+----------+
 
+
 * What is the average price of a home per "view" rating having an average home price greater than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
+
 +----+--------------------+
 |view|round(avg(price), 2)|
 +----+--------------------+
@@ -68,6 +75,7 @@
 |  77|          1076205.56|
 +----+--------------------+
 
+
 ## Further Steps
 * Cache your temporary table home_sales.
 
@@ -76,17 +84,17 @@
 * Using the cached data, run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
 original runtime: --- 1.32511568069458 seconds ---
 uncached runtime: --- 0.9027597904205322 seconds ---
-the cached runtime of 0.9027597904205322 was shorter than the original runtime of 1.32511568069458 seconds by *0.42235589027404785* seconds
+the cached runtime of 0.9027597904205322 was shorter than the original runtime of 1.32511568069458 seconds by **0.42235589027404785** seconds
+
 
 * Partition by the "date_built" field on the formatted parquet home sales data.
 
 * Create a temporary table for the parquet data.
 
+
 * Run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-the cached runtime of 0.9027597904205322 was shorter than the partitioned runtime of 1.452556848526001 seconds by *0.5497970581054688* seconds
+the cached runtime of 0.9027597904205322 was shorter than the partitioned runtime of 1.452556848526001 seconds by **0.5497970581054688** seconds
 
 * Uncache the home_sales temporary table.
 
 * Verify that the home_sales temporary table is uncached using PySpark.
-
-* Download your Home_Sales.ipynb file and upload it into your "Home_Sales" GitHub repository.
