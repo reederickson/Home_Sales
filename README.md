@@ -74,15 +74,16 @@
 * Check if your temporary table is cached.
 
 * Using the cached data, run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-original runtime: --- 2.050758123397827 seconds ---
-uncached runtime: --- 0.7640218734741211 seconds ---
-the uncached runtime is *1.28673624992* seconds faster than the cached runtime
+original runtime: --- 1.32511568069458 seconds ---
+uncached runtime: --- 0.9027597904205322 seconds ---
+the cached runtime of 0.9027597904205322 was shorter than the original runtime of 1.32511568069458 seconds by *0.42235589027404785* seconds
 
 * Partition by the "date_built" field on the formatted parquet home sales data.
 
 * Create a temporary table for the parquet data.
 
 * Run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+the cached runtime of 0.9027597904205322 was shorter than the partitioned runtime of 1.452556848526001 seconds by *0.5497970581054688* seconds
 
 * Uncache the home_sales temporary table.
 
