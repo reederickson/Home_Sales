@@ -82,6 +82,7 @@
 * Check if your temporary table is cached.
 
 * Using the cached data, run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+  
 original runtime: --- 1.32511568069458 seconds ---
 uncached runtime: --- 0.9027597904205322 seconds ---
 the cached runtime of 0.9027597904205322 was shorter than the original runtime of 1.32511568069458 seconds by **0.42235589027404785** seconds
@@ -93,6 +94,7 @@ the cached runtime of 0.9027597904205322 was shorter than the original runtime o
 
 
 * Run the last query that calculates the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+  
 the cached runtime of 0.9027597904205322 was shorter than the partitioned runtime of 1.452556848526001 seconds by **0.5497970581054688** seconds
 
 * Uncache the home_sales temporary table.
